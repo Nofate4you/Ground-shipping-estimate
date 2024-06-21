@@ -1,0 +1,48 @@
+weight = 1.5
+
+# Ground shipping
+if weight <= 2:
+  cost_ground = weight * 1.50 + 20.00
+elif weight <= 6:
+  cost_ground = weight * 3.00 + 20.00
+elif weight <= 10:
+  cost_ground = weight * 4.00 + 20.00
+else:
+  cost_ground = weight * 4.75 + 20.00
+print("Ground Shipping Cost:$", cost_ground)
+
+#Ground Shipping Premiun price 
+Ground_Premium = 125.00
+print("Ground Shipping Premium:$", Ground_Premium)
+
+# Drone Shipping
+if weight <= 2:
+  cost_drone = weight * 4.50 + 0.00
+elif weight <= 6:
+  cost_drone = weight * 9.00 + 0.00
+elif weight <= 10:
+  cost_drone = weight * 12.00 + 0.00
+else:
+  cost_drone = weight * 14.25 + 0.00
+print("Drone Shipping Cost:$", cost_drone)
+
+# Finding the cheapest method
+if cost_ground < Ground_Premium and cost_ground < cost_drone:
+    print("The cheapest option is Ground Shipping at $", cost_ground)
+elif Ground_Premium < cost_ground and Ground_Premium < cost_drone:
+    print("The cheapest option is Ground Shipping Premium at $", Ground_Premium)
+else:
+    print("The cheapest option is Drone Shipping at $", cost_drone)
+
+
+
+
+
+
+
+
+
+
+
+
+
